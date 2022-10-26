@@ -1,0 +1,312 @@
+/* Import Poppins font - looks better than default font
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+ */
+
+/* custom properties, rem(font size base), box-sizing */
+:root {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+/* border- box on all elements */
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+/* Remove system-level styling on inputs used by browsers */
+input {
+  appearance: none;
+}
+
+/* Defines a height for html so that we can use percentages */
+html {
+  height: 100%;
+}
+
+/* background-color, margins, fonts */
+/* body extends whole viewport and no scrolling issues */
+/* font-size by default is 16px */
+body {
+  height: 100%;
+  min-height: 100vh;
+  font-family: "Open Sans', sans-serif";
+  font-size: 1.8rem;
+  font-weight: 300 !important;
+  background-color: white;
+}
+
+nav a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+  padding-left: 1.5rem;
+  padding-top: 1.5rem;
+}
+
+nav span {
+  color: #2a2a33;
+}
+
+nav span:hover {
+  color: #006aff;
+}
+
+nav {
+  border-bottom: 1px solid lightgrey;
+  position: relative;
+  background-color: white;
+  display: flex;
+  align-items: center;
+}
+
+svg {
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+  display: none;
+}
+
+.nav {
+  display: flex;
+  gap: 2.5rem;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+nav > ul {
+  margin: 0px;
+}
+
+.row {
+  display: flex;
+  gap: 2rem;
+  margin-top: 1rem;
+}
+.column {
+  display: flex;
+  flex-direction: column;
+
+}
+
+.two-column {
+  display: flex;
+  row-gap: 2rem;
+  flex-direction: column;
+}
+
+.resources {
+  row-gap: 1rem;
+}
+
+h2 {
+  font-size: 1.6rem;
+}
+
+.sub-menu {
+  display: flex;
+  gap: 3rem;
+  font-size: 1.6rem;
+  padding: 2rem;
+  padding-bottom: 3rem;
+  background-color: white;
+  opacity: 0;
+  left: 0rem;
+  top: 8.3rem;
+  width: 100%;
+  position: absolute;
+}
+
+.sub-menu a {
+  text-decoration: none;
+  color: #006aff;
+  display: flex;
+  align-items: center;
+  font-weight: 300 !important;
+}
+
+.bundle, .bundle1 {
+  border-left: 1px solid rgb(216, 216, 216);
+  border-right: 1px solid rgb(216, 216, 216);
+  padding-left: 3rem;
+  padding-right: 3rem;
+}
+
+.bundle a {
+  margin-top: 1rem;
+}
+
+.test:hover + .sub-menu {
+  opacity: 1 !important;
+}
+
+.test1:hover + .sub-menu1 {
+  opacity: 1 !important;
+}
+
+.sub-menu:hover{
+  opacity: 1 !important;
+}
+
+.sub-menu1:hover{
+  opacity: 1 !important;
+}
+
+
+
+.sub-menu1 {
+  display: flex;
+  gap: 3rem;
+  font-size: 1.6rem;
+  padding: 2rem;
+  padding-bottom: 3rem;
+  background-color: white;
+  opacity: 0;
+  left: 0rem;
+  top: 8.3rem;
+  width: 100%;
+  position: absolute;
+}
+
+.sub-menu1 a {
+  text-decoration: none;
+  color: #006aff;
+  display: flex;
+  align-items: center;
+  font-weight: 300 !important;
+}
+
+.sub-menu1 .two-column {
+  margin-top: 1rem;
+}
+
+@media (max-width: 890px) {
+  svg {
+    display: block;
+  }
+
+  nav {
+    padding-top: 2.9rem;
+    padding-bottom: 2.9rem;
+    position: static;
+  }
+
+  body {
+    position: relative;
+  }
+
+.nav {
+  display: none;
+  position: absolute;
+  flex-direction: column;
+  top: 8.3rem;
+  background-color: white;
+  width: 100%;
+  height: 100%;
+  padding-left: 0;
+  padding-top: 0;
+  gap: 0rem;
+}
+
+.showMenu {
+  display: flex;
+}
+
+.nav li {
+  border-bottom: 1px solid lightgrey;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.nav span {
+  color: #2a2a33;
+  font-size: 1.6rem;
+  width: 100%;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  margin-left: 1.5rem;
+}
+
+.arrow-down {
+  width: 0; 
+  height: 0; 
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  
+  border-top: 8px solid rgb(73,146,232);
+  margin-right: 1.5rem;
+  margin-left: 1.5rem;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+}
+.item span {
+  border-right: 1px solid rgb(216, 216, 216);
+
+}
+
+.sub-menu{
+  display: none;
+  flex-direction: column;
+  position: static;
+  padding-left: 0;
+  padding-right: 0;
+  background-color: white;
+  padding-left: 3rem;
+  opacity: 1;
+  transition: max-height 0.5s cubic-bezier(0, 1, 0, 1);
+}
+
+.sub-menu1{
+  display: none;
+  flex-direction: column;
+  position: static;
+  padding-left: 0;
+  padding-right: 0;
+  background-color: white;
+  padding-left: 3rem;
+  opacity: 1;
+}
+
+.hide {
+  display: none;
+  transition: max-height 0.5s cubic-bezier(0, 1, 0, 1);
+  max-height: 0px;
+}
+
+.show {
+  display: flex;
+  transition: max-height 1s ease-in-out;
+  max-height: 1000px !important;
+}
+
+
+
+
+.open {
+  display: flex;
+  max-height: 1000px !important;
+  transition: max-height 1s ease-in-out;
+
+}
+
+.bundle {
+  padding: 0;
+  border: none;
+}
+
+.bundle1 {
+  padding: 0;
+  border: none;
+}
+
+.row {
+  flex-direction: column;
+}
+
+}
